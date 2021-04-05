@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>Use case description</head>
+    <body>
+        <center>
+            <h1>Use case table</h1>
+        </center>
+
+        <table border="5" bordercolor="red" align="center">
+            <tr>
+                <th>Use case name</th>
+                <th>Description</th>
+                <th>Actors</th>
+                <th>Pre-conditions</th>
+                <th>Post-conditions</th>
+                <th>Steps</th>
+            </tr>
+            <tr>
+                <td>Login</td>
+                <td>A user login to System to access the functionality of the system</td>
+                <td>Non-logged user</td>
+                <td>System must be connected to the network. A user must have an account already.</td>
+                <td>After a successfull login the user is sent to the main page</td>
+                <td>Enter username/password -> Validate username/password -> Return user role -> Allow access to the System</td>
+            </tr>
+            <tr>
+                <td>Register</td>
+                <td>A user creates an account to be able to access the System</td>
+                <td>Non-logged user</td>
+                <td>The System must be connected to the network.The user must enter a username,password,real name,email,affiliation</td>
+                <td>After a successfull registration a mail is sent to the user to confirm the account</td>
+                <td>The user must complete the registration form</td>
+            </tr>
+            <tr>
+                <td>Open conference's site</td>
+                <td>A user can open a conference site to be able to see the details about the conference.</td>
+                <td>Logged user</td>
+                <td>A user must be logged in to be able to access the conference site</td>
+                <td>The user will be sent to the conference site</td>
+                <td>User opens conference list -> Select the conference the user wants to see</td>
+            </tr>
+            <tr>
+                <td>Attend a conference section</td>
+                <td>A user can attend any conference he the user wishes from the list of conferences.</td>
+                <td>Logged user</td>
+                <td>A user must be logged in to be able to attend a conference.The user must be the fee to attend the conference.</td>
+                <td>A message will be sent to the user after he pays the fee to inform him that he can attend the conference</td>
+                <td>The user must make a request to attend -> he must pay the fee -> a message that his request was approved is sent</td>
+            </tr>
+            <tr>
+                <td>Create a conference</td>
+                <td>A user can create a new conference and also can invite reviewers and also a Co-Chair</td>
+                <td>Chair</td>
+                <td>The user has to be logged in and he must have the status of Chair</td>
+                <td>A new conference is created and an email is sent by the Chair of the conference to other users to invite them as a Co-Chair or as reviewers</td>
+                <td>Creates a new conference -> invites a Co-Chair and reviewers</td>
+            </tr>
+            <tr>
+                <td>Change conferences deadlines</td>
+                <td>The Chair of a conference can change the deadlines whenever he wishes</td>
+                <td>Chair</td>
+                <td>The user has to be logged in as a Chair</td>
+                <td>An email is sent to every user who will attend the conference that the deadline was changed</td>
+                <td>Go to conference deadlines -> change the deadlines -> Send the email with the new deadline</td>
+            </tr>
+            <tr>
+                <td>Assign a paper for review</td>
+                <td>After a paper is submitted by an Author a Co-Chair has the responsability to assign reviewwers to it</td>
+                <td>Co-Chair</td>
+                <td>The user has to be logged in as a Chair or as a Co-Chair. Also the paper must be already submitted.</td>
+                <td>An email is sent to the reviewers who were assigned a papee</td>
+                <td>Author submits paper -> A Co-Chair assigns reviewers for the paper -> Send an email to the reviewers</td>
+            </tr>
+            <tr>
+                <td>Review undecided paper</td>
+                <td>A Co-Chair must review a paper in case no review was done for the paper or if the evaluation of the paper is incomplete</td>
+                <td>Co-Chair</td>
+                <td>The user has to be logged in as a Chair or Co-Chair</td>
+                <td>An email is send with the review to the Author after the review is done</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Create a section</td>
+                <td>Different sections for the conferences are created. For every section create a Co-Chair must choose a session chair and also the accepted papers for the conference</td>
+                <td>Co-Chair</td>
+                <td>The user must be logged in a Chair or Co-Chair. The papers submitted by Authors had to be reviewed already</td>
+                <td>An email is sent to the user selected as session chair</td>
+                <td>Create conference section -> choose session chair -> choose accepted papers -> Send notification emails</td>
+            </tr>
+            <tr>
+                <td>Submit paper</td>
+                <td>A paper is submitted by an Author to be reviewed</td>
+                <td>Author</td>
+                <td>The user has to be an Author to submit a paper. Also the digital format for the paper has to be a pdf file otherwise the system will not accept it</td>
+                <td>The paper is submitted for review. A message will appear if the paper was submitted without any problem</td>
+                <td>Submit paper -> Verify the format -> Send message if the paper was submitted successfully</td>
+            </tr>
+            <tr>
+                <td>See his reviews</td>
+                <td>After the paper is reviewed the user can see all the reviews of his paper</td>
+                <td>Author</td>
+                <td>The user has to be the author of the paper to see the reviews </td>
+                <td>The user has access to all reviews about his paper</td>
+                <td>User opens reviews list -> Select from the list a review for the paper</td>
+            </tr>
+            <tr>
+                <td>Bid abstract</td>
+                <td>A reviewer can mention what kind of paper he would like to review</td>
+                <td>Reviewer</td>
+                <td>A user has to be logged in as a reviewer</td>
+                <td>The user will mostly receive the kind of apper he wants to review</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Review papers</td>
+                <td>A user who has the rank of Reviewer can review other people papers and to evaluate them giving each aper a score as well</td>
+                <td>Reviewer</td>
+                <td>A user have to be logged in as a reviewer to be able to review papers</td>
+                <td>An email with review is send to the author of the paper</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>See reviews of reviewed papers</td>
+                <td>A user who has the rank of reviewer can see any review of any paper</td>
+                <td>Reviewer</td>
+                <td>A user has to be logged in as a reviewer to be able to see reviews of reviewed papers</td>
+                <td></td>
+                <td>User opens reviews list -> Select the review for the paper he is interested in</td>
+            </tr>
+        </table>
+    </body>
+</html>
